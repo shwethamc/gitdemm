@@ -12,6 +12,7 @@ static {
 	System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 	System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 }
+	
 public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	WebDriver driver=new ChromeDriver();
@@ -27,7 +28,8 @@ public static void main(String[] args) {
     
     
    WebElement errmsg1 = driver.findElement(By.xpath("//div[@class='formErrorContent']"));
- if(!errmsg1.isDisplayed())
+ //if error msg is displayed
+	if(!errmsg1.isDisplayed())
  {
 	 System.out.println("testcase failed");
  }
